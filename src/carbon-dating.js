@@ -18,8 +18,7 @@ const HALF_LIFE_PERIOD = 5730;
  *
  */
 function dateSample(sampleActivity) {
-  if (typeof(sampleActivity) == 'string' && typeof(+sampleActivity) == 'number' && 
-                            sampleActivity <= 15 && sampleActivity > 0){
+  if (typeof(sampleActivity) == 'string' && typeof(+sampleActivity) == 'number' && sampleActivity <= 15 && sampleActivity > 0){
     return Math.ceil(Math.log(15 / sampleActivity) / (0.693 / 5730));
   }
   return false;
